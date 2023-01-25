@@ -16,7 +16,11 @@ dependencies:
 
   # Use a tight version constraint to ensure that a constraint on
   # `json_annotation` properly constrains all features it provides.
-  json_annotation: any
+  json_annotation:
+    git:
+      url: git@github.com:andreasmpet/json_serializable.dart.git
+      path: ./json_annotation/
+      ref: 1352f7ba2a51b6b1c467a9e9bc16f49fb4c751a9
   meta: ^1.3.0
   path: ^1.8.0
   pub_semver: ^2.0.0
