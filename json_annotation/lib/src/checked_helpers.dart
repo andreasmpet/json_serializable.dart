@@ -89,6 +89,12 @@ T $checkedConvert<T>(
   } on CheckedFromJsonException {
     rethrow;
   } catch (error, stack) {
+    try {
+      final value = map[key];
+      if (value is num) {
+        return value.toString() as T;
+      }
+    } catch (e) {}
     throw CheckedFromJsonException._(error, stack, map, key);
   }
 }
